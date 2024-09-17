@@ -66,6 +66,8 @@ begin
     end if;
   end process synchReset_proc;
   
+ reset_n <= key0_d3;
+  
   synchUserIn_proc : process (CLOCK_50) begin
     if (rising_edge(CLOCK_50)) then
       if (reset_n = '0') then
