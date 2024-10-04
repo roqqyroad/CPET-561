@@ -544,8 +544,8 @@
  <connection kind="clock" version="18.1" start="clk_0.clk" end="switches.clk" />
  <connection kind="clock" version="18.1" start="clk_0.clk" end="pushbuttons.clk" />
  <connection kind="clock" version="18.1" start="clk_0.clk" end="hex0.clk" />
- <connection kind="clock" version="18.1" start="clk_0.clk" end="sysid_qsys_0.clk" />
  <connection kind="clock" version="18.1" start="clk_0.clk" end="jtag_uart_0.clk" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="sysid_qsys_0.clk" />
  <connection
    kind="clock"
    version="18.1"
@@ -593,22 +593,7 @@
    kind="reset"
    version="18.1"
    start="nios2_gen2_0.debug_reset_request"
-   end="nios2_gen2_0.reset" />
- <connection
-   kind="reset"
-   version="18.1"
-   start="nios2_gen2_0.debug_reset_request"
-   end="switches.reset" />
- <connection
-   kind="reset"
-   version="18.1"
-   start="nios2_gen2_0.debug_reset_request"
-   end="pushbuttons.reset" />
- <connection
-   kind="reset"
-   version="18.1"
-   start="nios2_gen2_0.debug_reset_request"
-   end="hex0.reset" />
+   end="sysid_qsys_0.reset" />
  <connection
    kind="reset"
    version="18.1"
@@ -618,7 +603,7 @@
    kind="reset"
    version="18.1"
    start="nios2_gen2_0.debug_reset_request"
-   end="sysid_qsys_0.reset" />
+   end="nios2_gen2_0.reset" />
  <connection
    kind="reset"
    version="18.1"

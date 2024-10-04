@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;nios_software/lab2software.c&apos; to &apos;lab2display.c&apos;" description="Rename resource &apos;lab2software.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="lab2software.c" name="lab2display.c" stamp="1727809967558" updateReferences="true"/>
+</session>
