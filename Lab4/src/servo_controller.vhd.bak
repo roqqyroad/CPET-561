@@ -1,0 +1,109 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity servo_controller is
+    port (
+        clk             : in  std_logic;
+        reset_n         : in  std_logic;  -- Active low reset
+        out_wave_export : out std_logic;  -- PWM output for the servo
+        irq             : out std_logic;  -- Interrupt signal
+        write           : in  std_logic;  -- Avalon write signal
+        writedata       : in  std_logic_vector(31 downto 0); -- Data to write to registers
+        address         : in  std_logic_vector(1 downto 0)  -- Avalon address for min/max angle register
+    );
+end entity;
+
+architecture behavioral of servo_controller is
+    signal angle_count      : unsigned(31 downto 0) := (others => '0');  -- Current angle pulse width
+    signal period_count     : unsigned(31 downto 0) := (others => '0');
+    signal state            : std_logic_vector(1 downto 0) := "00";  -- FSM state
+    signal max_angle_reg    : unsigned(31 downto 0) := (others => '0');  -- Default max angle (45 degrees)
+    signal min_angle_reg    : unsigned(31 downto 0) := (others => '0');  -- Default min angle (135 degrees)
+
+    constant PERIOD_MAX     : unsigned(31 downto 0) := to_unsigned(1000000, 32);  -- 20ms period (50MHz clock)
+    signal pwm_output       : std_logic := '0';  -- Internal signal for PWM output
+begin
+
+    out_wave_export <= pwm_output;  -- Assign internal signal to output port
+
+    -- FSM for sweeping servo
+    process(clk, reset_n)
+    begin
+        if reset_n = '0' then
+            state <= "00";  -- Reset state
+            angle_count <= min_angle_reg;
+            pwm_output <= '0';
+            irq <= '0';
+        elsif rising_edge(clk) then
+            case state is
+                when "00" =>  -- Sweep right
+                    if angle_count < max_angle_reg then
+                        angle_count <= angle_count + 1;
+                    else
+                        state <= "01";  -- Move to interrupt state
+                    end if;
+
+                when "01" =>  -- Interrupt right
+                    irq <= '1';  -- Raise interrupt
+                    if write = '1' then
+                        irq <= '0';
+                        state <= "10";  -- Sweep left
+                    end if;
+
+                when "10" =>  -- Sweep left
+                    if angle_count > min_angle_reg then
+                        angle_count <= angle_count - 1;
+                    else
+                        state <= "11";  -- Move to interrupt left
+                    end if;
+
+                when "11" =>  -- Interrupt left
+                    irq <= '1';  -- Raise interrupt
+                    if write = '1' then
+                        irq <= '0';
+                        state <= "00";  -- Go back to sweep right
+                    end if;
+
+                when others =>
+                    state <= "00";
+            end case;
+        end if;
+    end process;
+
+    -- Period counter for PWM generation
+    process(clk)
+    begin
+        if rising_edge(clk) then
+            if period_count = PERIOD_MAX then
+                period_count <= (others => '0');
+            else
+                period_count <= period_count + 1;
+            end if;
+
+            if period_count < angle_count then
+                pwm_output <= '1';  -- Pulse high
+            else
+                pwm_output <= '0';  -- Pulse low
+            end if;
+        end if;
+    end process;
+
+    -- Write logic for register updates
+    process(clk)
+    begin
+        if rising_edge(clk) then
+            if write = '1' then
+                case address is
+                    when "00" =>
+                        min_angle_reg <= unsigned(writedata);
+                    when "01" =>
+                        max_angle_reg <= unsigned(writedata);
+                    when others =>
+                        null;  -- Handle other addresses if needed
+                end case;
+            end if;
+        end if;
+    end process;
+
+end architecture;
