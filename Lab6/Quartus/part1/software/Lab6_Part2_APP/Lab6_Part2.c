@@ -1,0 +1,96 @@
+typedef   signed char   sint8;              // signed 8 bit values
+typedef unsigned char   uint8;              // unsigned 8 bit values
+typedef   signed short  sint16;             // signed 16 bit values
+typedef unsigned short  uint16;             // unsigned 16 bit values
+typedef   signed long   sint32;             // signed 32 bit values
+typedef unsigned long   uint32;             // unsigned 32 bit values
+typedef         float   real32;             // 32 bit real values
+
+#define ram_size  0x4000
+#define data_32   0x12345678
+#define data_16   0x9ABC
+#define  data_8   0xDE
+
+
+uint8  * Key_0_ptr        = (uint8*)  0x9010;
+uint8  * Led_0_ptr        = (uint8*)  0x9000;
+uint32 * Inferred_ram_ptr = (uint32*) 0x0;
+
+void uint32_ram_test(uint32 * start ,uint32 size, uint32 data);
+void uint16_ram_test(uint16 * start ,uint32 size, uint16 data);
+void uint8_ram_test (uint8 *  start ,uint32 size, uint8 data);
+
+int main(void)
+{
+	*Led_0_ptr = 0x00;
+	while(1)
+    {
+		uint32_ram_test((uint32*)Inferred_ram_ptr,(uint32)ram_size,(uint32)data_32);
+		uint16_ram_test((uint16*)Inferred_ram_ptr,(uint32)ram_size,(uint16)data_16);
+		uint8_ram_test ((uint8 *)Inferred_ram_ptr,(uint32)ram_size,(uint8 )data_8);
+    };
+
+    return 0;
+}
+
+void uint32_ram_test(uint32 * start_ptr ,uint32 size, uint32 data)
+{
+
+	size = size/4; //size is a quarter of what it was before
+	*Led_0_ptr = 0x00; //reset to x00
+
+	for(int i = 0; i < size ;i++)  //until i reaches size, add 1
+	{
+		start_ptr[i] = data; //and start pointer at i = data
+	}
+
+	//makes sure demonstrate failure works
+	for(int i = 0; i < size ;i++) //until i reaches size, add 1
+    {
+        if (start_ptr[i] != data) //if start pointer at i is not data
+        {
+        	*Led_0_ptr |= 0xFF;  //reset
+        };
+    }
+}
+
+
+void uint16_ram_test(uint16 * start_ptr ,uint32 size, uint16 data)
+{
+
+	size = size/2;//size is half of what it was before
+	*Led_0_ptr = 0x00; //reset to x00
+
+	for(int i = 0; i < size ;i++) //until i reaches size, add 1
+	{
+		start_ptr[i] = data;//and start pointer at i = data
+	}
+
+	//makes sure demonstrate failure works
+	for(int i = 0; i < size ;i++) //until i reaches size, add 1
+    {
+        if (start_ptr[i] != data) //if start pointer at i is not data
+        {
+        	*Led_0_ptr |= 0xFF; //reset
+        };
+    }
+}
+
+void uint8_ram_test(uint8 * start_ptr ,uint32 size, uint8 data)
+{
+	size = size; //size change is not needed here like for the others
+	*Led_0_ptr = 0x00; //reset to x00
+	for(int i = 0; i < size ;i++) //until i reaches size, add 1
+	{
+		start_ptr[i] = data; //and start pointer at i = data
+	}
+
+	//makes sure demonstrate failure works
+	for(int i = 0; i < size ;i++) //until i reaches size, add 1
+    {
+        if (start_ptr[i] != data) //if start pointer at i is not data
+        {
+        	*Led_0_ptr = 0xff; //reset
+        };
+    }
+}

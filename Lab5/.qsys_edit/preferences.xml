@@ -7,8 +7,7 @@
    <irq preferredWidth="34" />
   </columns>
  </systemtable>
- <library
-   expandedCategories="Library/Basic Functions/Simulation; Debug and Verification/Simulation,Library/Processors and Peripherals,Library/Interface Protocols,Library,Library/Basic Functions/Simulation; Debug and Verification/Debug and Performance,Library/Basic Functions,Project,Library/Basic Functions/Simulation; Debug and Verification,Library/Interface Protocols/Serial" />
- <window width="1936" height="1048" x="-8" y="-8" />
+ <library expandedCategories="Project,Project/ESDI_IP,Library" />
+ <window width="2576" height="1456" x="-8" y="-8" />
  <generation synthesis="VHDL" />
 </preferences>
