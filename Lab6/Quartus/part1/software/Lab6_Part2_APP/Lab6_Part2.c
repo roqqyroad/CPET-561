@@ -6,15 +6,14 @@ typedef   signed long   sint32;             // signed 32 bit values
 typedef unsigned long   uint32;             // unsigned 32 bit values
 typedef         float   real32;             // 32 bit real values
 
-#define ram_size  0x4000
-#define data_32   0x12345678
-#define data_16   0x9ABC
-#define  data_8   0xDE
+#define ram_size  0x4000 //specified in lab procedure
+#define data_32   0x12345678 //specified in lab procedure
+#define data_16   0x9ABC //specified in lab procedure, random value I chose
+#define  data_8   0xDE //specified in lab procedure, random value I chose
 
 
-uint8  * Key_0_ptr        = (uint8*)  0x9010;
-uint8  * Led_0_ptr        = (uint8*)  0x9000;
-uint32 * Inferred_ram_ptr = (uint32*) 0x0;
+uint8  * Key_0_ptr        = (uint8*)  0x9010; //value found in system.h
+uint8  * Led_0_ptr        = (uint8*)  0x9000; //value found in system.h
 
 void uint32_ram_test(uint32 * start ,uint32 size, uint32 data);
 void uint16_ram_test(uint16 * start ,uint32 size, uint16 data);
@@ -22,15 +21,15 @@ void uint8_ram_test (uint8 *  start ,uint32 size, uint8 data);
 
 int main(void)
 {
-	*Led_0_ptr = 0x00;
+	*Led_0_ptr = 0x00; //reset to zero 
 	while(1)
     {
-		uint32_ram_test((uint32*)Inferred_ram_ptr,(uint32)ram_size,(uint32)data_32);
-		uint16_ram_test((uint16*)Inferred_ram_ptr,(uint32)ram_size,(uint16)data_16);
-		uint8_ram_test ((uint8 *)Inferred_ram_ptr,(uint32)ram_size,(uint8 )data_8);
+		uint32_ram_test((uint32*)0x0, (uint32)ram_size, (uint32)data_32); //run inferred ram test with the values for 32b memory
+		uint16_ram_test((uint16*)0x0, (uint32)ram_size, (uint16)data_16); //run inferred ram test with the values for 16b memory
+		uint8_ram_test ((uint8 *)0x0, (uint32)ram_size, (uint8 )data_8);  //run inferred ram test with the values for 8b memory 
     };
 
-    return 0;
+    return 0; //main must return something 
 }
 
 void uint32_ram_test(uint32 * start_ptr ,uint32 size, uint32 data)
