@@ -35,49 +35,49 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
   8 .debug_aranges 00000390  00000000  00000000  00002620  2**3
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_info   0000407f  00000000  00000000  000029b0  2**0
+  9 .debug_info   00004074  00000000  00000000  000029b0  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_abbrev 00001685  00000000  00000000  00006a2f  2**0
+ 10 .debug_abbrev 00001685  00000000  00000000  00006a24  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_line   00001953  00000000  00000000  000080b4  2**0
+ 11 .debug_line   00001944  00000000  00000000  000080a9  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_frame  000006e0  00000000  00000000  00009a08  2**2
+ 12 .debug_frame  000006e0  00000000  00000000  000099f0  2**2
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_str    00001141  00000000  00000000  0000a0e8  2**0
+ 13 .debug_str    00001136  00000000  00000000  0000a0d0  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_loc    000002ba  00000000  00000000  0000b229  2**0
+ 14 .debug_loc    000002ba  00000000  00000000  0000b206  2**0
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_alt_sim_info 00000010  00000000  00000000  0000b4e4  2**2
+ 15 .debug_alt_sim_info 00000010  00000000  00000000  0000b4c0  2**2
                   CONTENTS, READONLY, DEBUGGING
- 16 .debug_ranges 00000090  00000000  00000000  0000b4f8  2**3
+ 16 .debug_ranges 00000090  00000000  00000000  0000b4d0  2**3
                   CONTENTS, READONLY, DEBUGGING
- 17 .thread_model 00000003  00000000  00000000  0000ca0e  2**0
+ 17 .thread_model 00000003  00000000  00000000  0000c9e6  2**0
                   CONTENTS, READONLY
- 18 .cpu          0000000c  00000000  00000000  0000ca11  2**0
+ 18 .cpu          0000000c  00000000  00000000  0000c9e9  2**0
                   CONTENTS, READONLY
- 19 .qsys         00000001  00000000  00000000  0000ca1d  2**0
+ 19 .qsys         00000001  00000000  00000000  0000c9f5  2**0
                   CONTENTS, READONLY
- 20 .simulation_enabled 00000001  00000000  00000000  0000ca1e  2**0
+ 20 .simulation_enabled 00000001  00000000  00000000  0000c9f6  2**0
                   CONTENTS, READONLY
- 21 .sysid_hash   00000004  00000000  00000000  0000ca1f  2**0
+ 21 .sysid_hash   00000004  00000000  00000000  0000c9f7  2**0
                   CONTENTS, READONLY
- 22 .sysid_base   00000004  00000000  00000000  0000ca23  2**0
+ 22 .sysid_base   00000004  00000000  00000000  0000c9fb  2**0
                   CONTENTS, READONLY
- 23 .sysid_time   00000004  00000000  00000000  0000ca27  2**0
+ 23 .sysid_time   00000004  00000000  00000000  0000c9ff  2**0
                   CONTENTS, READONLY
- 24 .stderr_dev   0000000b  00000000  00000000  0000ca2b  2**0
+ 24 .stderr_dev   0000000b  00000000  00000000  0000ca03  2**0
                   CONTENTS, READONLY
- 25 .stdin_dev    0000000b  00000000  00000000  0000ca36  2**0
+ 25 .stdin_dev    0000000b  00000000  00000000  0000ca0e  2**0
                   CONTENTS, READONLY
- 26 .stdout_dev   0000000b  00000000  00000000  0000ca41  2**0
+ 26 .stdout_dev   0000000b  00000000  00000000  0000ca19  2**0
                   CONTENTS, READONLY
- 27 .sopc_system_name 0000000b  00000000  00000000  0000ca4c  2**0
+ 27 .sopc_system_name 0000000b  00000000  00000000  0000ca24  2**0
                   CONTENTS, READONLY
- 28 .quartus_project_dir 00000037  00000000  00000000  0000ca57  2**0
+ 28 .quartus_project_dir 0000002c  00000000  00000000  0000ca2f  2**0
                   CONTENTS, READONLY
- 29 .jdi          000000e2  00000000  00000000  0000ca8e  2**0
+ 29 .jdi          000000e2  00000000  00000000  0000ca5b  2**0
                   CONTENTS, READONLY
- 30 .sopcinfo     0004187a  00000000  00000000  0000cb70  2**0
+ 30 .sopcinfo     0004187a  00000000  00000000  0000cb3d  2**0
                   CONTENTS, READONLY
 SYMBOL TABLE:
 00004000 l    d  .entry	00000000 .entry
@@ -285,70 +285,44 @@ alt_after_alt_main:
     4058:	003fff06 	br	4058 <_gp+0xffff6a88>
 
 0000405c <main>:
-void uint32_ram_test(uint32 * start ,uint32 size, uint32 data);
-void uint16_ram_test(uint16 * start ,uint32 size, uint16 data);
-void uint8_ram_test (uint8 *  start ,uint32 size, uint8 data);
-
-int main(void)
-{
     405c:	defffe04 	addi	sp,sp,-8
     4060:	dfc00115 	stw	ra,4(sp)
     4064:	df000015 	stw	fp,0(sp)
     4068:	d839883a 	mov	fp,sp
-	*Led_0_ptr = 0x00;
     406c:	d0a00117 	ldw	r2,-32764(gp)
     4070:	10000005 	stb	zero,0(r2)
-	while(1)
-    {
-		uint32_ram_test((uint32*)Inferred_ram_ptr,(uint32)ram_size,(uint32)data_32);
     4074:	d0a0c117 	ldw	r2,-31996(gp)
     4078:	01848d34 	movhi	r6,4660
     407c:	31959e04 	addi	r6,r6,22136
     4080:	01500004 	movi	r5,16384
     4084:	1009883a 	mov	r4,r2
     4088:	00040b80 	call	40b8 <uint32_ram_test>
-		uint16_ram_test((uint16*)Inferred_ram_ptr,(uint32)ram_size,(uint16)data_16);
     408c:	d0a0c117 	ldw	r2,-31996(gp)
     4090:	01a6af14 	movui	r6,39612
     4094:	01500004 	movi	r5,16384
     4098:	1009883a 	mov	r4,r2
     409c:	00041880 	call	4188 <uint16_ram_test>
-		uint8_ram_test ((uint8 *)Inferred_ram_ptr,(uint32)ram_size,(uint8 )data_8);
     40a0:	d0a0c117 	ldw	r2,-31996(gp)
     40a4:	01803784 	movi	r6,222
     40a8:	01500004 	movi	r5,16384
     40ac:	1009883a 	mov	r4,r2
     40b0:	00042580 	call	4258 <uint8_ram_test>
-    };
     40b4:	003fef06 	br	4074 <_gp+0xffff6aa4>
 
 000040b8 <uint32_ram_test>:
-
-    return 0;
-}
-
-void uint32_ram_test(uint32 * start_ptr ,uint32 size, uint32 data)
-{
     40b8:	defffa04 	addi	sp,sp,-24
     40bc:	df000515 	stw	fp,20(sp)
     40c0:	df000504 	addi	fp,sp,20
     40c4:	e13ffd15 	stw	r4,-12(fp)
     40c8:	e17ffe15 	stw	r5,-8(fp)
     40cc:	e1bfff15 	stw	r6,-4(fp)
-
-	size = size/4; //size is a quarter of what it was before
     40d0:	e0bffe17 	ldw	r2,-8(fp)
     40d4:	1004d0ba 	srli	r2,r2,2
     40d8:	e0bffe15 	stw	r2,-8(fp)
-	*Led_0_ptr = 0x00; //reset to x00
     40dc:	d0a00117 	ldw	r2,-32764(gp)
     40e0:	10000005 	stb	zero,0(r2)
-
-	for(int i = 0; i < size ;i++)  //until i reaches size, add 1
     40e4:	e03ffb15 	stw	zero,-20(fp)
     40e8:	00000b06 	br	4118 <uint32_ram_test+0x60>
-	{
-		start_ptr[i] = data; //and start pointer at i = data
     40ec:	e0bffb17 	ldw	r2,-20(fp)
     40f0:	1085883a 	add	r2,r2,r2
     40f4:	1085883a 	add	r2,r2,r2
@@ -357,28 +331,14 @@ void uint32_ram_test(uint32 * start_ptr ,uint32 size, uint32 data)
     4100:	10c5883a 	add	r2,r2,r3
     4104:	e0ffff17 	ldw	r3,-4(fp)
     4108:	10c00015 	stw	r3,0(r2)
-{
-
-	size = size/4; //size is a quarter of what it was before
-	*Led_0_ptr = 0x00; //reset to x00
-
-	for(int i = 0; i < size ;i++)  //until i reaches size, add 1
     410c:	e0bffb17 	ldw	r2,-20(fp)
     4110:	10800044 	addi	r2,r2,1
     4114:	e0bffb15 	stw	r2,-20(fp)
     4118:	e0fffb17 	ldw	r3,-20(fp)
     411c:	e0bffe17 	ldw	r2,-8(fp)
     4120:	18bff236 	bltu	r3,r2,40ec <_gp+0xffff6b1c>
-	{
-		start_ptr[i] = data; //and start pointer at i = data
-	}
-
-	//makes sure demonstrate failure works
-	for(int i = 0; i < size ;i++) //until i reaches size, add 1
     4124:	e03ffc15 	stw	zero,-16(fp)
     4128:	00000f06 	br	4168 <uint32_ram_test+0xb0>
-    {
-        if (start_ptr[i] != data) //if start pointer at i is not data
     412c:	e0bffc17 	ldw	r2,-16(fp)
     4130:	1085883a 	add	r2,r2,r2
     4134:	1085883a 	add	r2,r2,r2
@@ -388,29 +348,15 @@ void uint32_ram_test(uint32 * start_ptr ,uint32 size, uint32 data)
     4144:	10c00017 	ldw	r3,0(r2)
     4148:	e0bfff17 	ldw	r2,-4(fp)
     414c:	18800326 	beq	r3,r2,415c <uint32_ram_test+0xa4>
-        {
-        	*Led_0_ptr |= 0xFF;  //reset
     4150:	d0a00117 	ldw	r2,-32764(gp)
     4154:	00ffffc4 	movi	r3,-1
     4158:	10c00005 	stb	r3,0(r2)
-	{
-		start_ptr[i] = data; //and start pointer at i = data
-	}
-
-	//makes sure demonstrate failure works
-	for(int i = 0; i < size ;i++) //until i reaches size, add 1
     415c:	e0bffc17 	ldw	r2,-16(fp)
     4160:	10800044 	addi	r2,r2,1
     4164:	e0bffc15 	stw	r2,-16(fp)
     4168:	e0fffc17 	ldw	r3,-16(fp)
     416c:	e0bffe17 	ldw	r2,-8(fp)
     4170:	18bfee36 	bltu	r3,r2,412c <_gp+0xffff6b5c>
-        if (start_ptr[i] != data) //if start pointer at i is not data
-        {
-        	*Led_0_ptr |= 0xFF;  //reset
-        };
-    }
-}
     4174:	0001883a 	nop
     4178:	e037883a 	mov	sp,fp
     417c:	df000017 	ldw	fp,0(sp)
@@ -418,10 +364,6 @@ void uint32_ram_test(uint32 * start_ptr ,uint32 size, uint32 data)
     4184:	f800283a 	ret
 
 00004188 <uint16_ram_test>:
-
-
-void uint16_ram_test(uint16 * start_ptr ,uint32 size, uint16 data)
-{
     4188:	defffa04 	addi	sp,sp,-24
     418c:	df000515 	stw	fp,20(sp)
     4190:	df000504 	addi	fp,sp,20
@@ -429,20 +371,13 @@ void uint16_ram_test(uint16 * start_ptr ,uint32 size, uint16 data)
     4198:	e17ffe15 	stw	r5,-8(fp)
     419c:	3005883a 	mov	r2,r6
     41a0:	e0bfff0d 	sth	r2,-4(fp)
-
-	size = size/2;//size is half of what it was before
     41a4:	e0bffe17 	ldw	r2,-8(fp)
     41a8:	1004d07a 	srli	r2,r2,1
     41ac:	e0bffe15 	stw	r2,-8(fp)
-	*Led_0_ptr = 0x00; //reset to x00
     41b0:	d0a00117 	ldw	r2,-32764(gp)
     41b4:	10000005 	stb	zero,0(r2)
-
-	for(int i = 0; i < size ;i++) //until i reaches size, add 1
     41b8:	e03ffb15 	stw	zero,-20(fp)
     41bc:	00000a06 	br	41e8 <uint16_ram_test+0x60>
-	{
-		start_ptr[i] = data;//and start pointer at i = data
     41c0:	e0bffb17 	ldw	r2,-20(fp)
     41c4:	1085883a 	add	r2,r2,r2
     41c8:	1007883a 	mov	r3,r2
@@ -450,28 +385,14 @@ void uint16_ram_test(uint16 * start_ptr ,uint32 size, uint16 data)
     41d0:	10c5883a 	add	r2,r2,r3
     41d4:	e0ffff0b 	ldhu	r3,-4(fp)
     41d8:	10c0000d 	sth	r3,0(r2)
-{
-
-	size = size/2;//size is half of what it was before
-	*Led_0_ptr = 0x00; //reset to x00
-
-	for(int i = 0; i < size ;i++) //until i reaches size, add 1
     41dc:	e0bffb17 	ldw	r2,-20(fp)
     41e0:	10800044 	addi	r2,r2,1
     41e4:	e0bffb15 	stw	r2,-20(fp)
     41e8:	e0fffb17 	ldw	r3,-20(fp)
     41ec:	e0bffe17 	ldw	r2,-8(fp)
     41f0:	18bff336 	bltu	r3,r2,41c0 <_gp+0xffff6bf0>
-	{
-		start_ptr[i] = data;//and start pointer at i = data
-	}
-
-	//makes sure demonstrate failure works
-	for(int i = 0; i < size ;i++) //until i reaches size, add 1
     41f4:	e03ffc15 	stw	zero,-16(fp)
     41f8:	00000f06 	br	4238 <uint16_ram_test+0xb0>
-    {
-        if (start_ptr[i] != data) //if start pointer at i is not data
     41fc:	e0bffc17 	ldw	r2,-16(fp)
     4200:	1085883a 	add	r2,r2,r2
     4204:	1007883a 	mov	r3,r2
@@ -481,29 +402,15 @@ void uint16_ram_test(uint16 * start_ptr ,uint32 size, uint16 data)
     4214:	10ffffcc 	andi	r3,r2,65535
     4218:	e0bfff0b 	ldhu	r2,-4(fp)
     421c:	18800326 	beq	r3,r2,422c <uint16_ram_test+0xa4>
-        {
-        	*Led_0_ptr |= 0xFF; //reset
     4220:	d0a00117 	ldw	r2,-32764(gp)
     4224:	00ffffc4 	movi	r3,-1
     4228:	10c00005 	stb	r3,0(r2)
-	{
-		start_ptr[i] = data;//and start pointer at i = data
-	}
-
-	//makes sure demonstrate failure works
-	for(int i = 0; i < size ;i++) //until i reaches size, add 1
     422c:	e0bffc17 	ldw	r2,-16(fp)
     4230:	10800044 	addi	r2,r2,1
     4234:	e0bffc15 	stw	r2,-16(fp)
     4238:	e0fffc17 	ldw	r3,-16(fp)
     423c:	e0bffe17 	ldw	r2,-8(fp)
     4240:	18bfee36 	bltu	r3,r2,41fc <_gp+0xffff6c2c>
-        if (start_ptr[i] != data) //if start pointer at i is not data
-        {
-        	*Led_0_ptr |= 0xFF; //reset
-        };
-    }
-}
     4244:	0001883a 	nop
     4248:	e037883a 	mov	sp,fp
     424c:	df000017 	ldw	fp,0(sp)
@@ -511,9 +418,6 @@ void uint16_ram_test(uint16 * start_ptr ,uint32 size, uint16 data)
     4254:	f800283a 	ret
 
 00004258 <uint8_ram_test>:
-
-void uint8_ram_test(uint8 * start_ptr ,uint32 size, uint8 data)
-{
     4258:	defffa04 	addi	sp,sp,-24
     425c:	df000515 	stw	fp,20(sp)
     4260:	df000504 	addi	fp,sp,20
@@ -521,42 +425,23 @@ void uint8_ram_test(uint8 * start_ptr ,uint32 size, uint8 data)
     4268:	e17ffe15 	stw	r5,-8(fp)
     426c:	3005883a 	mov	r2,r6
     4270:	e0bfff05 	stb	r2,-4(fp)
-	size = size; //size change is not needed here like for the others
-	*Led_0_ptr = 0x00; //reset to x00
     4274:	d0a00117 	ldw	r2,-32764(gp)
     4278:	10000005 	stb	zero,0(r2)
-	for(int i = 0; i < size ;i++) //until i reaches size, add 1
     427c:	e03ffb15 	stw	zero,-20(fp)
     4280:	00000806 	br	42a4 <uint8_ram_test+0x4c>
-	{
-		start_ptr[i] = data; //and start pointer at i = data
     4284:	e0bffb17 	ldw	r2,-20(fp)
     4288:	e0fffd17 	ldw	r3,-12(fp)
     428c:	1885883a 	add	r2,r3,r2
     4290:	e0ffff03 	ldbu	r3,-4(fp)
     4294:	10c00005 	stb	r3,0(r2)
-
-void uint8_ram_test(uint8 * start_ptr ,uint32 size, uint8 data)
-{
-	size = size; //size change is not needed here like for the others
-	*Led_0_ptr = 0x00; //reset to x00
-	for(int i = 0; i < size ;i++) //until i reaches size, add 1
     4298:	e0bffb17 	ldw	r2,-20(fp)
     429c:	10800044 	addi	r2,r2,1
     42a0:	e0bffb15 	stw	r2,-20(fp)
     42a4:	e0fffb17 	ldw	r3,-20(fp)
     42a8:	e0bffe17 	ldw	r2,-8(fp)
     42ac:	18bff536 	bltu	r3,r2,4284 <_gp+0xffff6cb4>
-	{
-		start_ptr[i] = data; //and start pointer at i = data
-	}
-
-	//makes sure demonstrate failure works
-	for(int i = 0; i < size ;i++) //until i reaches size, add 1
     42b0:	e03ffc15 	stw	zero,-16(fp)
     42b4:	00000d06 	br	42ec <uint8_ram_test+0x94>
-    {
-        if (start_ptr[i] != data) //if start pointer at i is not data
     42b8:	e0bffc17 	ldw	r2,-16(fp)
     42bc:	e0fffd17 	ldw	r3,-12(fp)
     42c0:	1885883a 	add	r2,r3,r2
@@ -564,29 +449,15 @@ void uint8_ram_test(uint8 * start_ptr ,uint32 size, uint8 data)
     42c8:	10c03fcc 	andi	r3,r2,255
     42cc:	e0bfff03 	ldbu	r2,-4(fp)
     42d0:	18800326 	beq	r3,r2,42e0 <uint8_ram_test+0x88>
-        {
-        	*Led_0_ptr = 0xff; //reset
     42d4:	d0a00117 	ldw	r2,-32764(gp)
     42d8:	00ffffc4 	movi	r3,-1
     42dc:	10c00005 	stb	r3,0(r2)
-	{
-		start_ptr[i] = data; //and start pointer at i = data
-	}
-
-	//makes sure demonstrate failure works
-	for(int i = 0; i < size ;i++) //until i reaches size, add 1
     42e0:	e0bffc17 	ldw	r2,-16(fp)
     42e4:	10800044 	addi	r2,r2,1
     42e8:	e0bffc15 	stw	r2,-16(fp)
     42ec:	e0fffc17 	ldw	r3,-16(fp)
     42f0:	e0bffe17 	ldw	r2,-8(fp)
     42f4:	18bff036 	bltu	r3,r2,42b8 <_gp+0xffff6ce8>
-        if (start_ptr[i] != data) //if start pointer at i is not data
-        {
-        	*Led_0_ptr = 0xff; //reset
-        };
-    }
-}
     42f8:	0001883a 	nop
     42fc:	e037883a 	mov	sp,fp
     4300:	df000017 	ldw	fp,0(sp)
