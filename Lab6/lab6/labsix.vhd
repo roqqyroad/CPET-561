@@ -13,6 +13,7 @@ END ENTITY labsix;
 
 ARCHITECTURE arch OF labsix IS
 
+  --COMPONENTS
   component nios_system is
     port (
       clk_clk       : in  std_logic                    := 'X';             -- clk
@@ -34,40 +35,27 @@ ARCHITECTURE arch OF labsix IS
       sync_out          : out std_logic_vector (bits-1 downto 0)
     );
   end component synchronizer;
-  
-  signal ctr           : std_logic_vector(25 downto 0);
-  signal KEY_sync       : std_logic_vector( 3 downto 0);
+  --END OF COMPONENTS
+
+  signal ctr           : std_logic_vector(25 downto 0); --counter signal
 BEGIN
 
   
   counter_proc : process (CLOCK_50) begin
-    if (KEY_sync(0) = '0') then
-      ctr <= "00" & x"000000";
-    elsif (rising_edge(CLOCK_50)) then
-      ctr <= ctr + ("00" & x"000001");
+    if (KEY(0) = '0') then --if key 0 is 0 then 
+      ctr <= "00" & x"000000"; --reset the counter
+    elsif (rising_edge(CLOCK_50)) then --if we have a rising edge
+      ctr <= ctr + ("00" & x"000001"); --and with one!
     end if;
   end process counter_proc;
-  LEDR(9) <= ctr(25);
+  LEDR(9) <= ctr(25); --led add one to toggle on or off
 
-    
-  KEY_synchronizer : synchronizer
-    generic map(
-      bits => 4
-    )
-    port map(
-      clk               => CLOCK_50,
-      reset             => KEY_sync(0),
-      reset_value       => x"F",
-      async_in          => KEY,
-      sync_out          => KEY_sync
-    );
-  
   nios_processor : component nios_system
     port map (
       clk_clk       => CLOCK_50,          --   clk gets clock
-      keys_export  => KEY_sync,          -- key_0 for pb 0
-      leds_export  => LEDR(7 downto 0),  
-      reset_reset_n => KEY_sync(0)        -- reset for reset_n
+      keys_export  => KEY_sync,          -- key 0 for pb 0
+      leds_export  => LEDR(7 downto 0),  --leds for leds
+      reset_reset_n => KEY(0)        -- reset for reset_n
       );
 
 END ARCHITECTURE arch;
