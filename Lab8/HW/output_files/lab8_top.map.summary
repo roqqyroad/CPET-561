@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Wed Nov 22 10:11:29 2023
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : lab8_top
+Top-level Entity Name : lab8_top
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 274
+Total pins : 36
+Total virtual pins : 0
+Total block memory bits : 0
+Total DSP Blocks : 17
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0
+Total DLLs : 0

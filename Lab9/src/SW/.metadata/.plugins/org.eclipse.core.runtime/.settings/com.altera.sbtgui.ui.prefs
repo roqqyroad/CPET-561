@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+newSoftwareExampleWizardPage.defaultLocation=C\:\\gitrepos\\CPET561\\DE1_SoC_Lab9\\src\\SW\\nios_software
+newSoftwareExampleWizardPage.sopcinfoFile=C\:\\gitrepos\\CPET561\\DE1_SoC_Lab9\\src\\HW\\nios_system\\nios_system.sopcinfo
+newSoftwareExampleWizardPage2.newBspLocation=C\:\\gitrepos\\CPET561\\DE1_SoC_Lab9\\src\\SW\\nios_software_bsp
