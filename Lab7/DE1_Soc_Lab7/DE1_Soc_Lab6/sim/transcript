@@ -1,0 +1,429 @@
+# //  ModelSim SE-64 2019.2 Apr 17 2019
+# //
+# //  Copyright 1991-2019 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 11:27:23 on Dec 12,2024
+# vcom -reportprogress 300 -93 -work work ../../DE1_Soc_Lab6/Quartus/part3/raminfr_be.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity raminfr_be
+# -- Compiling architecture rtl of raminfr_be
+# End time: 11:27:23 on Dec 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 11:27:23 on Dec 12,2024
+# vcom -reportprogress 300 -93 -work work ../../DE1_Soc_Lab6/Quartus/part3/raminfr_be_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity raminfr_be_tb
+# -- Compiling architecture beh of raminfr_be_tb
+# End time: 11:27:23 on Dec 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" -msgmode both raminfr_be_tb 
+# Start time: 11:27:23 on Dec 12,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.raminfr_be_tb(beh)#1
+# Loading work.raminfr_be(rtl)#1
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: testbench start
+#    Time: 0 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /raminfr_be_tb/uut
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ns  Iteration: 0  Instance: /raminfr_be_tb/uut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /raminfr_be_tb/uut
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ns  Iteration: 0  Instance: /raminfr_be_tb/uut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /raminfr_be_tb/uut
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ns  Iteration: 0  Instance: /raminfr_be_tb/uut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /raminfr_be_tb/uut
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ns  Iteration: 0  Instance: /raminfr_be_tb/uut
+# Causality operation skipped due to absence of debug database file
+run
+# ** Note:  test complete,testbench stop 
+#    Time: 1147030 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 1147030 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 2294060 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 2294060 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 3441090 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 3441090 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 4588120 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 4588120 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 5735150 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 5735150 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 6882180 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 6882180 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 8029210 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 8029210 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 9176240 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 9176240 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 10323270 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 10323270 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 11470300 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 11470300 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 12617330 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 12617330 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 13764360 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 13764360 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 14911390 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 14911390 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 16058420 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 16058420 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 17205450 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 17205450 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 18352480 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 18352480 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 19499510 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 19499510 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 20646540 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 20646540 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 21793570 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 21793570 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 22940600 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 22940600 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 24087630 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 24087630 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 25234660 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 25234660 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 26381690 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 26381690 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 27528720 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 27528720 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 28675750 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 28675750 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 29822780 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 29822780 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 30969810 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 30969810 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 32116840 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 32116840 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 33263870 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 33263870 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 34410900 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 34410900 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 35557930 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 35557930 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 36704960 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 36704960 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 37851990 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 37851990 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 38999020 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 38999020 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 40146050 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 40146050 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 41293080 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 41293080 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 42440110 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 42440110 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 43587140 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 43587140 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 44734170 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 44734170 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 45881200 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 45881200 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 47028230 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 47028230 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 48175260 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 48175260 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 49322290 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 49322290 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 50469320 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 50469320 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 51616350 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 51616350 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 52763380 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 52763380 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 53910410 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 53910410 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 55057440 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 55057440 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 56204470 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 56204470 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 57351500 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 57351500 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 58498530 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 58498530 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 59645560 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 59645560 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 60792590 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 60792590 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 61939620 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 61939620 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 63086650 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 63086650 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 64233680 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 64233680 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 65380710 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 65380710 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 66527740 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 66527740 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 67674770 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 67674770 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 68821800 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 68821800 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 69968830 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 69968830 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 71115860 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 71115860 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 72262890 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 72262890 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 73409920 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 73409920 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 74556950 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 74556950 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 75703980 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 75703980 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 76851010 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 76851010 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 77998040 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 77998040 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 79145070 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 79145070 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 80292100 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 80292100 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 81439130 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 81439130 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 82586160 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 82586160 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 83733190 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 83733190 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 84880220 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 84880220 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 86027250 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 86027250 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 87174280 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 87174280 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 88321310 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 88321310 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 89468340 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 89468340 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 90615370 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 90615370 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 91762400 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 91762400 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 92909430 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 92909430 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 94056460 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 94056460 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 95203490 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 95203490 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 96350520 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 96350520 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 97497550 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 97497550 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 98644580 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 98644580 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 99791610 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 99791610 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note:  test complete,testbench stop 
+#    Time: 100938640 ns  Iteration: 0  Instance: /raminfr_be_tb
+# ** Note: testbench start
+#    Time: 100938640 ns  Iteration: 0  Instance: /raminfr_be_tb
+# End time: 14:28:44 on Dec 12,2024, Elapsed time: 3:01:21
+# Errors: 46, Warnings: 9
