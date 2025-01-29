@@ -1,5 +1,5 @@
 Fitter report for Lab2
-Wed Jan 29 10:22:49 2025
+Wed Jan 29 10:34:56 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -65,7 +65,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                    ;
 +---------------------------------+-------------------------------------------------+
-; Fitter Status                   ; Successful - Wed Jan 29 10:22:49 2025           ;
+; Fitter Status                   ; Successful - Wed Jan 29 10:34:56 2025           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; Lab2                                            ;
 ; Top-level Entity Name           ; Lab2                                            ;
@@ -155,20 +155,20 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 20          ;
 ; Maximum allowed            ; 10          ;
 ;                            ;             ;
-; Average used               ; 1.08        ;
+; Average used               ; 1.07        ;
 ; Maximum used               ; 10          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   1.0%      ;
-;     Processor 3            ;   1.0%      ;
+;     Processor 3            ;   0.9%      ;
 ;     Processor 4            ;   0.9%      ;
 ;     Processor 5            ;   0.8%      ;
 ;     Processor 6            ;   0.8%      ;
 ;     Processor 7            ;   0.8%      ;
 ;     Processor 8            ;   0.8%      ;
 ;     Processor 9            ;   0.8%      ;
-;     Processor 10           ;   0.8%      ;
+;     Processor 10           ;   0.7%      ;
 +----------------------------+-------------+
 
 
@@ -537,7 +537,7 @@ refer to the applicable agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/rjd5748/CPET-561/output_files/Lab2.pin.
+The pin-out file can be found in C:/Users/rjd5748/CPET-561-1/Lab2/output_files/Lab2.pin.
 
 
 +---------------------------------------------------------------------------------------------+
@@ -2670,24 +2670,24 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:06
-Info (11888): Total time spent on timing analysis during the Fitter is 1.22 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 1.25 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:05
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:04
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
-Info (144001): Generated suppressed messages file C:/Users/rjd5748/CPET-561/output_files/Lab2.fit.smsg
+Info (144001): Generated suppressed messages file C:/Users/rjd5748/CPET-561-1/Lab2/output_files/Lab2.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 243 warnings
-    Info: Peak virtual memory: 7284 megabytes
-    Info: Processing ended: Wed Jan 29 10:22:50 2025
-    Info: Elapsed time: 00:01:16
-    Info: Total CPU time (on all processors): 00:01:30
+    Info: Peak virtual memory: 7286 megabytes
+    Info: Processing ended: Wed Jan 29 10:34:57 2025
+    Info: Elapsed time: 00:01:18
+    Info: Total CPU time (on all processors): 00:01:25
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/rjd5748/CPET-561/output_files/Lab2.fit.smsg.
+The suppressed messages can be found in C:/Users/rjd5748/CPET-561-1/Lab2/output_files/Lab2.fit.smsg.
 
 

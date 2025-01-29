@@ -1,9 +1,13 @@
-15:57:57 **** Incremental Build of configuration Nios II for project nios_software ****
+11:52:15 **** Incremental Build of configuration Nios II for project nios_software ****
 make all 
 Info: Building ../nios_software_bsp/
 C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_software_bsp/
 [BSP build complete]
-[nios_software build complete]
+Info: Assembling lab2Display.s to obj/default/lab2Display.o
+nios2-elf-gcc -MP -MMD -c -I../nios_software_bsp//HAL/inc -I../nios_software_bsp/ -I../nios_software_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -Wa,-I../nios_software_bsp//HAL/inc -Wa,-I../nios_software_bsp/ -Wa,-I../nios_software_bsp//drivers/inc -Wa,-gdwarf2 -o obj/default/lab2Display.o lab2Display.s
+lab2Display.s: Assembler messages:
+lab2Display.s:52: Error: unknown register -1
+make: *** [obj/default/lab2Display.o] Error 1
 
-15:57:57 Build Finished (took 794ms)
+11:52:16 Build Finished (took 791ms)
 

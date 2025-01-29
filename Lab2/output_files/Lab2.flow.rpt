@@ -1,5 +1,5 @@
 Flow report for Lab2
-Wed Jan 29 10:23:04 2025
+Wed Jan 29 10:35:11 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Wed Jan 29 10:22:57 2025           ;
+; Flow Status                     ; Successful - Wed Jan 29 10:35:04 2025           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; Lab2                                            ;
 ; Top-level Entity Name           ; Lab2                                            ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/29/2025 10:21:08 ;
+; Start date & time ; 01/29/2025 10:33:12 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Lab2                ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+---------------------------------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                                         ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+---------------------------------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 194042949994131.173816406717332                               ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 194042949994131.173816479208996                               ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                            ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                             ; --            ; --          ; --         ;
 ; MISC_FILE                           ; nios_system/synthesis/../nios_system.cmp                      ; --            ; --          ; --         ;
@@ -102,11 +102,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:23     ; 1.0                     ; 5017 MB             ; 00:00:19                           ;
-; Fitter               ; 00:01:15     ; 1.1                     ; 7284 MB             ; 00:01:29                           ;
-; Assembler            ; 00:00:06     ; 1.0                     ; 4874 MB             ; 00:00:05                           ;
-; Timing Analyzer      ; 00:00:06     ; 1.9                     ; 5283 MB             ; 00:00:08                           ;
-; Total                ; 00:01:50     ; --                      ; --                  ; 00:02:01                           ;
+; Analysis & Synthesis ; 00:00:24     ; 1.0                     ; 5018 MB             ; 00:00:21                           ;
+; Fitter               ; 00:01:17     ; 1.1                     ; 7286 MB             ; 00:01:25                           ;
+; Assembler            ; 00:00:06     ; 1.0                     ; 4875 MB             ; 00:00:06                           ;
+; Timing Analyzer      ; 00:00:06     ; 1.9                     ; 5284 MB             ; 00:00:08                           ;
+; Total                ; 00:01:53     ; --                      ; --                  ; 00:02:00                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
